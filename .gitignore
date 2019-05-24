@@ -61,3 +61,6 @@ target/
 
 # Vitual Environments
 venv/
+
+# Editors
+.idea/

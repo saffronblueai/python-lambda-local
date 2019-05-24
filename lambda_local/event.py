@@ -7,7 +7,8 @@ import json
 
 
 def read_event(path):
-    with open(path) as event:
-        data = json.load(event)
-
-    return data
+    with open(path) as f:
+        event = f.read()
+        event = json.loads(event)
+        event['body'] = json.dumps(event['body'])
+        return event
